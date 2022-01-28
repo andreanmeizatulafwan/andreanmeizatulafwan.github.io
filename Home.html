@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JQuery Link -->
+<script type="text/javascript" src="asset/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="asset/jquery-ui.js"></script>
+<link rel="stylesheet" href="asset/jquery-ui.css">
+<title>UAS Desain Web</title>
+<script type="text/javascript">
+    $(function () {
+        $("#dialogku").dialog({
+            autoOpen: false,
+            show: 'blind',
+            hide: 'explode',
+            width: 'auto'
+        });
+        $('#dibuka').click(function () {
+            $('#dialogku').dialog('open');
+            return false;
+        });
+         $("#panels_map").dialog({
+            autoOpen: false,
+            show: 'blind',
+            hide: 'explode',
+            width: 'auto'
+        });
+        $('#map').click(function () {
+            $('#panels_map').dialog('open');
+            return false;
+        });
+    });
+
+     $(document).ready(function(){
+          $("#btn").click(function(){
+              $(".panel").slideToggle("slow");
+          });
+
+           $("#btn1").click(function(){
+              $(".panel1").slideToggle("slow");
+          });
+
+           $("#btn2").click(function(){
+              $(".panel2").slideToggle("slow");
+          });
+      });
+</script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav" style="background-color: #003566;">
+        <div class="container py-2">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.jpg" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                <strong>Travel.id</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="Objek Wisata.html">Objek Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sarana Akomodasi.html">Sarana Akomodasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Wawasan.html">Wawasan</a>
+                    </li>
+                    <form class="d-flex">
+                        <input class="form-control me-3" type="search" placeholder="Pencarian" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Cari</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        <!-- end navbar -->
+
+        <!-- carousal -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image/img2.jpg" class="d-block w-100" width="100%" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-1">Air Terjun Benang Kelambu</h5>
+              <p>Selamat Datang Di Pulau Lombok.</p>
+              <button type="button" class="btn btn-success btn-lg">Jelajah</button>
+              <button type="button" class="btn btn-primary btn-lg">Video</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/Sesaot.jpg" class="d-block w-100" width="100%" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-1">Wisata Pemandian Aiknyet</h5>
+                <p>Selamat Datang Di Pulau Lombok.</p>
+                <button type="button" class="btn btn-success btn-lg">Jelajah</button>
+                <button type="button" class="btn btn-primary btn-lg">Video</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/rafting.jpg" class="d-block w-100" width="100%" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-1">Rafting</h1></h5>
+                <p>Selamat Datang Di Pulau Lombok.</p>
+                <button type="button" class="btn btn-success btn-lg">Jelajah</button>
+                <button type="button" class="btn btn-primary btn-lg">Video</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div id="dialogku">
+        <h3>Video Sembalun</h3>
+        <iframe width="560" height="315" src="https://youtu.be/KqPuWe--bfo" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div id="panels_map">
+        <h3>Google Maps Location</h3>
+        <iframe width="auto" height="315"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126261.27273450288!2d116.26696536269317!3d-8.531889026118135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc98613350d7b%3A0xb34948c6e7dd2f72!2sWisata%20Alam%20Aiknyet!5e0!3m2!1sid!2sid!4v1642990204465!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <hr><hr>
+
+      <!-- end carousal -->
+
+      <!-- Objek Wisata -->
+    <div class="container-fluid" style="background-color:#f3f4f5" id="objekwisata">
+      <p id="objekwisata" class="display-4" style="text-align:center;">Objek Wisata</p>
+      <div class="row">
+          <div class="col-md-6">
+              <h4>Objek Wisata Air Terjun Benang Kelambu</h4>
+              <p>Pulau Lombok merupakan sebuah pulau yang berada di Nusa Tenggara Barat. Pulau tersebut menyuguhkan banyak sekali tempat wisata baik wisata berupa air terjun maupun pantai. Di kalangan para wisatawan lokal, pulau Lombok sangat terkenal dengan kultur budaya, pantai dan air terjun. Salah satu contohnya ialah air terjun Benang Kelambu.....</p>
+
+              <div class="panel" style="display: none;">
+                  <p>Air terjun ini merupakan air terjun paling populer apabila Anda mengunjungi Pulau Lombok. Hal itu dikarenakan air terjun ini sangat indah dan memiliki akses yang mudah dijangkau oleh para wisatawan yang akan datang ke air terjun ini. Wisata air terjun ini berada tepat di kaki sebuah gunung bernama Gunung Agung, yang terletak persis di bagian tengah Pulau Lombok.. </p>
+                  <p>Menurut cerita warga setempat, konon sosok bernama Dewi Anjani yang sekaligus merupakan seorang ibu dari Hanoman seringkali mandi di Benang Kelambu tersebut. Konon katanya air terjun yang melalui celah batu yang membentuk sebanyak 4 tingkatan ini digunakan mandi oleh Dewi Anjani.</p>
+              </div>
+              <div class="text-end">
+                  <button id="btn" class="btn btn-primary btn-sm">Selanjutnya</button>
+              </div>
+              <h4>Follow Juga Social Media Kami</h4>
+              <a href="#" class="btn btn-primary">Facebook</a>
+              <a href="#" class="btn btn-success">Twitter</a>
+              <a href="#" class="btn btn-warning">Youtube</a>
+          </div>
+          <div class="col-md-6">
+              <figure class="figure">
+                  <img src="image/img2.jpg" class="img-thumbnail" width="100%" alt="gambar sembalun">
+                  <figcaption style="text-align:center;">Gambar Air Terjun Benang Kelambu</figcaption>
+              </figure>
+          </div>
+      </div>
+      <hr><hr>
+      <div class="row">
+          <div class="col-md-6">
+              <figure class="figure">
+                  <img src="image/Sesaot.jpg" class="img-thumbnail" width="100%" alt="gambar Kebun Raya">
+                  <figcaption style="text-align:center;">Gambar Wisata Alam Aiknyet</figcaption>
+              </figure>
+          </div>
+          <div class="col-md-6">
+              <h4>Objek Wisata Alam Aiknyet</h4>
+              <p>Desa Sesaot merupakan bagian dari jalur geowisata. Berkaitan erat dengan pembuatan jalur pendakian Sasak Kuno menuju gunung Rinjani. Desa ini tersusun oleh batuan gunung api dari komplek gunung api purba Punikan, berumur Pleistosen Akhir (sekitar 126.000 tahun), dan komplek gunung api Rinjani, berumur Holoses (sekitar 11.000 tahun) dalam skala waktu geologi.</p>
+              <div class="panel1" style="display: none;">
+                  <p>Desa Sesaot memiliki banyak sekali pemandian alami. Tempat yang kita bahas kali ini berada di dekat pintu masuk desa.</p>
+                  <p>Di sini terdapat aliran air alami dari Gunung Rinjani. Terlihat sangat jernih hingga bagian dasar tampak begitu jelas. Airnya berwarna biru tosca, sangat memanjakan mata.</p>
+              </div>
+              <div class="text-end">
+                <button id="btn" class="btn btn-primary btn-sm">Selanjutnya</button>
+            </div>
+            <h4>Follow Juga Social Media Kami</h4>
+              <a href="#" class="btn btn-primary">Facebook</a>
+              <a href="#" class="btn btn-success">Twitter</a>
+              <a href="#" class="btn btn-warning">Youtube</a>
+          </div>
+      </div>
+      <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+              <li class="page-item">
+                  <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  <hr><hr>
+
+      <!-- end objek wisata -->
+  
+  
+      <!-- Card --> 
+      <div class="container-fluid" style="background-color:#f3f4f5">
+        <p id="sarana" class="display-4" style="text-align:center;">Sarana Akomodasi</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 23rem;">
+                      <img src="image/R.jpg" class="card-img-top img-thumbnail" alt="danau" width="100%">
+                      <div class="card-body">
+                        <h5 class="card-title"> Restaurant</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-half" viewBox="0 0 16 16">
+                          <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
+                        </svg>
+                        <br>
+                     <p class="card-text">Disini juga terdapat beberapa Restaurant yang menjual berbagai macam makanan khas Lombok salah satunya adalah pelecing kangkung dan ayam taliwang </p>
+                        <a href="#" class="btn btn-primary">Booking Now !!!</a>
+                      </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 23rem;">
+                      <img src="image/17.jpg" class="card-img-top img-thumbnail" alt="danau" width="100%">
+                      <div class="card-body">
+                        <h5 class="card-title">Penginapan</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-half" viewBox="0 0 16 16">
+                          <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
+                        </svg>
+                        <br>
+                     <p class="card-text">Selain restaurant disini kami juga menyediakan penginapan, sehingga pengunjung yang ingin menghabiskan beberapa hari di tempat wisata kami bisa menyewa penginapan. harganya pun terjangkau, mulai dari 150.000 sampai 300.000/malam, tergantung fasilitas. </p>
+                        <a href="#" class="btn btn-primary">Booking Now !!!</a>
+                      </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 23rem;">
+                      <img src="image/sepeda.jpg" class="card-img-top img-thumbnail" alt="danau" width="100%">
+                      <div class="card-body">
+                        <h5 class="card-title">Sepeda</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="orange" class="bi bi-star" viewBox="0 0 16 16">
+                          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                        </svg>
+                        <br>
+                     <p class="card-text">Jika para pengunjung ingin menikmati wisata alam kami skalian berolah raga kami juga menyediakan jasa sewa sepeda, dengan harga 15.000/jam untuk anak-anak dan 30.000/jam untuk dewasa.</p>
+                        <a href="#" class="btn btn-primary">Booking Now !!!</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <hr>
+      <hr>
+      <!-- End Card --> 
+  
+      <!-- progressbar -->
+      <div class="container" style="background-color:#f3f4f5"> 
+        <p id="wawasan" class="display-4" style="text-align:center;">Kunjungan Wisatawan</p> 
+          <div class="progress"> 
+             <label class="h6">Wisata Pemandian Sesaot :</label> 
+               <div class="progress-bar progress-bar-striped progress-baranimated bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div> 
+          </div> 
+          <br> 
+          <div class="progress"> 
+             <label class="h6">Wisata Air Terjun Benang Kelambu:</label> 
+               <div class="progress-bar progress-bar-striped progress-baranimated bg-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div> 
+          </div> 
+          <br> 
+          <div class="progress"> 
+             <label class="h6">Wisata Rafting :</label> 
+               <div class="progress-bar progress-bar-striped progress-baranimated bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div> 
+          </div> 
+          <br> 
+         
+           
+       </div> 
+       <br> 
+       <hr> 
+     <hr>
+     <!--gallery wisatawan-->
+     <div class="container-fluid" style="background-color: #F3F4F5;">
+      <p class="display-4" style="text-align: center; background-color: #F3F4F5;">Gallery Wisatawan</p>
+  
+      <div class="row ui-sortable" id="move">
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/3.jpg" class="img-thumbnail">
+            <figcaption>Ayam Bakar Taliwang</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/R.jpg" class="img-thumbnail">
+            <figcaption>Restaurant</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/11.jpg" class="img-thumbnail">
+            <figcaption>Sate Bulayak</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/2.jpg" class="img-thumbnail">
+            <figcaption>Rafting</figcaption>
+          </figure>
+        </div>
+  
+        <div class="row ui-sortable" id="move2">
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/10.jpg" class="img-thumbnail">
+            <figcaption>Air Terjun Benang Kelambu</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/12.jpg" class="img-thumbnail">
+            <figcaption>Rafting</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/14.jpg" class="img-thumbnail">
+            <figcaption>Wisata Alam Aiknyet</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 ui-sortable-handle">
+          <figure>
+            <img src="image/9.jpg" class="img-thumbnail">
+            <figcaption>Air Terjun Benang Kelambu</figcaption>
+          </figure>
+        </div>
+      </div>
+      </div>
+      <hr>
+      <hr>
+      <!-- end progressbar -->
+  
+     <!-- Contact --> 
+<div class="container-fluid" style="background-color:#f3f4f5"> 
+  <p class="display-4" style="text-align:center;">Hubungi Kami</p> 
+  <div class="row">
+    <div class="col-md-6"> 
+      <form class="row g-3" style="background-color:#9d9d9d"> 
+      <div class="col-md-6"> 
+     <label for="namadepan" class="form-label">Nama Depan</label> 
+     <input type="text" class="form-control" id="namadepan"> 
+        </div> 
+        <div class="col-md-6"> 
+           <label for="namabelakang" class="form-label">Nama Belakang</label> 
+    <input type="text" class="form-control" id="namabelakang"> 
+        </div> 
+        <div class="col-md-6"> 
+        <label for="inputEmail4" class="form-label">Email</label> 
+        <input type="email" class="form-control" id="inputEmail4"> 
+        </div> 
+        <div class="col-md-6"> 
+        <label for="inputPassword4" class="formlabel">Password</label> 
+     <input type="password" class="form-control" id="inputPassword4"> 
+           </div> 
+        <div class="col-12"> 
+        <label for="telp" class="form-label">No Telp</label> 
+        <input type="text" class="form-control" id="notelp" > 
+        </div> 
+        <div class="col-12"> 
+        <label for="inputAddress2" class="formlabel">ALamat</label> 
+        <input type="text" class="form-control" id="inputAddress2" 
+> 
+        </div> 
+        <div class="col-md-6"> 
+        <label for="inputCity" class="form-label">Kabupaten/Kota</label> 
+        <input type="text" class="form-control" id="inputCity"> 
+        </div> 
+        <div class="col-md-4"> 
+        <label for="inputState" class="form-label">Desa</label> 
+           <select id="inputState" class="form-select"> 
+            <option selected>Choose...</option> 
+            <option>...</option> 
+  </select> 
+</div> 
+<div class="col-md-2"> 
+ <label for="inputZip" class="form-label">Zip</label><input type="text" class="form-control" id="inputZip"> 
+</div> 
+<div class="col-12"> 
+ <div class="form-check"> 
+   <input class="form-check-input" type="checkbox" id="gridCheck"> 
+   <label class="form-check-label" for="gridCheck"> 
+     Check me out 
+   </label> 
+ </div> 
+</div> 
+<div class="col-12"> 
+ <button type="submit" class="btn btn-primary btn-primary">Kirim</button> 
+</div> 
+</form> 
+   </div> 
+     <div class="col-md-6"> 
+        <p class="lead"><strong>Google Map Location</strong></p> 
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126261.27273450288!2d116.26696536269317!3d-8.531889026118135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc98613350d7b%3A0xb34948c6e7dd2f72!2sWisata%20Alam%20Aiknyet!5e0!3m2!1sid!2sid!4v1642990204465!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+     </div> 
+     
+  </div> 
+</div> 
+      <!-- end contact -->
+  
+      <!-- footer -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#9d9d9d" fill-opacity="1" d="M0,64L26.7,101.3C53.3,139,107,213,160,213.3C213.3,213,267,139,320,138.7C373.3,139,427,213,480,229.3C533.3,245,587,203,640,170.7C693.3,139,747,117,800,138.7C853.3,160,907,224,960,256C1013.3,288,1067,288,1120,256C1173.3,224,1227,160,1280,122.7C1333.3,85,1387,75,1413,69.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+        <div class="container-fluid" style="background-color:#9d9d9d"> 
+              <div class="row"> 
+                 <div class="col-md-4"> 
+                  <strong> Copyright @2021 Travel.id</strong> 
+                  <strong>
+                    <p>Andrean Meizatul Afwan</p>
+                    </strong>
+                 </div> 
+                 <div class="col-md-4"> 
+                    <ul style="text-align:left;" class="list-unstyled"> 
+                   <strong> <li ><a href="#"></a> Home</li> </strong>
+                    <li ><a href="objekwisata"></a> Objek Wisata</li> 
+                    <li ><a href="sarana"></a> Sarana dan Akomodasi</li> 
+                    <li ><a href="wawasan"></a> Wawasan</li> 
+                    </ul> 
+                 </div> 
+                 <div class="col-md-4"> 
+                    <h5>Terimakasih sudah mengunjungi website kami.</h5> 
+                 </div> 
+              </div> 
+           </div> 
+        </footer> 
+         
+         
+      <!-- end footer -->
+  
+  
+
+
+       <!--js bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
